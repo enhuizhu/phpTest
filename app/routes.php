@@ -15,3 +15,7 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+
+Route::get('api/getUsers', 'ApiController@getIndex');
+Route::get('api/getHobby', 'ApiController@getHobby');
