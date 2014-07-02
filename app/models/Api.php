@@ -16,9 +16,23 @@
      public static function getHobby(){
 	    $results=DB::select('select a.Name,b.HobbyName as Hobby from users as a left join hobbies as b on a.FavorHobbyId=b.HobbyId');
 		return $results;
-	 
 	 }
       
+	 /**
+     * function to add new user 
+     **/	  
+	  
+	 public static function addNewUser($name,$age,$hobbyId){
+         return DB::insert("insert into users (Name,Age,FavorHobbyId) values (?,?,?)",array($name,$age,$hobbyId));
+	 }
+
+     /**
+	 * function to delete user
+	 **/
+	 public static function deleteUser($id){
+	    return DB::delete("delete from users where ID=?",array($id));
+	 }
+      	  
 	  
    
    

@@ -19,3 +19,5 @@ Route::get('/', function()
 
 Route::get('api/getUsers', 'ApiController@getIndex');
 Route::get('api/getHobby', 'ApiController@getHobby');
+Route::get('api/addNewUser/{name}/{age}/{hobby}', 'ApiController@addNewUser');
+Route::get('api/deleteUser/{id}', 'ApiController@deleteUser');
