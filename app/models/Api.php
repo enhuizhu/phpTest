@@ -33,7 +33,14 @@
 	    return DB::delete("delete from users where ID=?",array($id));
 	 }
       	  
-	  
+	 /**
+	 * get all the hobby
+	 **/
+     public static function getAllHobby(){
+	    return DB::select("select * from hobbies");
+	 }
+     
+   
    
    
    }

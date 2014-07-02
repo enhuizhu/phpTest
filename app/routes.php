@@ -12,8 +12,11 @@
 */
 
 Route::get('/', function()
-{
-	return View::make('hello');
+{   
+    $hobbies=Api::getAllHobby();
+	$users=Api::getUsers();
+	//die(var_dump($hobbies));
+	return View::make('apiInteraction',array("hobbies"=>$hobbies,"users"=>$users));
 });
 
 
